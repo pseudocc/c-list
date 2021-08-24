@@ -1,2 +1,6 @@
+# build
 release_main
 debug_main
+
+# user settings
+.vscode/settings.json
