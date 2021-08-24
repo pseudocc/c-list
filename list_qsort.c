@@ -5,13 +5,13 @@
 #include <stdio.h>
 #endif
 
-static list_t* paritition(list_t** istart, list_t* end) {
+static list_t* partition(list_t** istart, list_t* end) {
   list_t* pivot = *istart;
   list_t* np = pivot->next;
   list_t** iend;
   
 #ifdef DEBUG
-  printf("\t[paritition start]\t");
+  printf("\t[partition start]\t");
   list_print(*istart, end);
 #endif
 
@@ -33,7 +33,7 @@ static list_t* paritition(list_t** istart, list_t* end) {
   }
 
 #ifdef DEBUG
-  printf("\t[paritition end]\t");
+  printf("\t[partition end]\t");
   list_print(*istart, end);
 #endif
 
@@ -44,7 +44,7 @@ static void list_qsort_impl(list_t** istart, list_t* end) {
   if (*istart == end || (*istart)->next == end)
     return;
   
-  list_t* pivot = paritition(istart, end);
+  list_t* pivot = partition(istart, end);
   list_qsort_impl(istart, pivot);
   list_qsort_impl(&pivot->next, end);
 
