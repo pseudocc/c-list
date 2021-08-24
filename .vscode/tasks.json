@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "make debug_main",
+      "command": "/usr/bin/make",
+      "args": [
+        "debug_main",
+        // "SEED=1629778554"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Task for debugger."
+    }
+  ],
+  "version": "2.0.0"
+}
