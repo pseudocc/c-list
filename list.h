@@ -21,4 +21,6 @@ void list_print(list_t* head, list_t* end);
  **/
 void list_qsort(list_t** ihead);
 
+void list_invert(list_t** ihead);
+
 #endif

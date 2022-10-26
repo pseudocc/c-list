@@ -1,6 +1,6 @@
 CC = gcc
 DEBUG = -g -DDEBUG
-INCLUDES = main.c list.c list_qsort.c
+INCLUDES = $(wildcard *.c)
 
 run: debug_main release_main
 

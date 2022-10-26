@@ -35,6 +35,10 @@ int main() {
   puts("=>");
   list_print(list, NULL);
 
+  list_invert(&list);
+  puts("=>");
+  list_print(list, NULL);
+
   list_free(&list);
   list_print(list, NULL);
 
