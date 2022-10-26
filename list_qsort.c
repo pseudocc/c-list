@@ -5,7 +5,7 @@
 #include <stdio.h>
 #endif
 
-static list_t* partition(list_t** istart, list_t* end) {
+list_t* partition(list_t** istart, list_t* end) {
   list_t* pivot = *istart;
   list_t* np = pivot->next;
   list_t** iend;
@@ -40,7 +40,7 @@ static list_t* partition(list_t** istart, list_t* end) {
   return pivot;
 }
 
-static void list_qsort_impl(list_t** istart, list_t* end) {
+void list_qsort_impl(list_t** istart, list_t* end) {
   if (*istart == end || (*istart)->next == end)
     return;
   
